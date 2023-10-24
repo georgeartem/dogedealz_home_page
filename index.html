@@ -6,6 +6,8 @@
     <title>DogeDealz | Building Parallel Economies with #DOGE</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="dogedealz_logo.jpg" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -23,7 +25,8 @@
     <main>
         <div class="price-container">
             <p class="price-label">CoinGecko Dogecoin Price:</p>
-            <p class="dogecoin-price" id="dogecoin-price">Loading...</p>
+            <p class="dogecoin-price" id="dogecoin-price">$ </p>
+            <p class="price-label">1 Ð = 1 Ð</p>
         </div>
         <div class="circular-menu">
             <div class="circle">
@@ -52,12 +55,17 @@
             
         </div>
         <div class="bottom-left-image">
-            <img src="doge.svg" alt="Doge Image" width="400" height="400">
+            <img src="doge.svg" alt="Doge Image" class="responsive-image">
         </div>
     </main>
     <footer>
-        <p>Powered by DogeDealz</p>
+        <div class="footer-menu">
+            <ul class="horizontal-menu">
+                <li><a href="privacy-policy.html" target="_blank">Privacy Policy</a></li>
+                <li><a href="gdpr.html" target="_blank">GDPR</a></li>
+            </ul>
+        </div>
+        <p>Powered by DogeDealz & <a href="https://forum.dogecoin.org" target="_blank" id="friends" :hover>Friends</a></p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>

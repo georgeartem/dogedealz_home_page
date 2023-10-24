@@ -7,6 +7,15 @@
     font-style: normal;
 }
 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 body {
     font-family: 'Doge Sans Font', Arial, sans-serif; /* Use Doge Sans Font as the primary font */
     margin: 0;
@@ -161,20 +170,16 @@ footer {
     margin-right: -20px; /* Center horizontally */
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .bottom-left-image {
     position: fixed;
     left: 100px;
     bottom: 10px;
     z-index: 999; /* Make sure it's above other content */
+}
+
+.responsive-image {
+    width: 25vw; /* Adjust the width as needed for your design */
+    height: auto; /* Maintain the aspect ratio */
 }
 
 .menu-image {
@@ -188,4 +193,20 @@ footer {
     transform: rotate(90deg);
     width: 240px;
     height: 120px;
+}
+
+.footer-menu {
+    background-color: black; /* Background color for the footer menu */
+    padding: 10px 0;
+    text-align: center;
+}
+
+#friends {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#friends:hover {
+    text-decoration: underline;
 }

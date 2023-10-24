@@ -1,17 +1,19 @@
-
-/*
-async function fetchDogecoinPrice() {
+window.onload = function(){
+  // we test if you have the Browser local Storage enable to store the Fiat Value of Dogecoin to calculate prices
+  function isLocalStorageAvailable(){
+    var SuchTest = 'SuchTest';
     try {
-        const response = await fetch(dogecoinPriceApi);
-        const data = await response.json();
-        const price = data.price; // Replace with the actual property from the API response
-        document.getElementById('dogecoin-price').textContent = `$${price}`;
-    } catch (error) {
-        console.error('Error fetching Dogecoin price:', error);
-        document.getElementById('dogecoin-price').textContent = 'Error';
+        localStorage.setItem(SuchTest, SuchTest);
+        localStorage.removeItem(SuchTest);
+        return true;
+    } catch(e) {
+        return false;
     }
-}*/
+}
 
+if(!isLocalStorageAvailable()){
+    alert("Please enable Local Storage on your browser to be able to store the Dogecoin current value");
+}
 
 
 var fiat_currency = 'usd';
@@ -23,4 +25,15 @@ var fiat_currency = 'usd';
     });
 
     const dogecoinValue = localStorage.getItem('dogecoinValue');
-    document.getElementById('dogecoin-price').textContent = dogecoinValue.dogecoin;
+    if (dogecoinValue <= 0 ){
+        setTimeout(
+        function() 
+            {
+              location.reload();
+            }, 120);
+    };
+
+    span = document.getElementById("dogecoin-price");
+    txt = document.createTextNode(dogecoinValue);
+    span.appendChild(txt);
+};
