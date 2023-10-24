@@ -105,8 +105,8 @@ footer {
     font-weight: bold;
 }
 .circle {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
     border: 2px solid  black;
     display: flex;
@@ -116,10 +116,49 @@ footer {
     animation: spin 20s linear infinite;
 }
 
+.center-image img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .menu-item {
     text-align: center;
     padding: 10px;
-    transform-origin: center;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.top-left {
+    
+    left: 50%; /* Center horizontally */
+    top: 0; /* Align with the top */
+    margin-left: -20px; /* Center horizontally */
+}
+
+.top-right {
+    
+    right: 0; /* Align with the right */
+    top: 50%; /* Center vertically */
+    margin-top: -20px; /* Center vertically */
+}
+
+.bottom-left {
+    left: 0; /* Align with the left */
+    bottom: 50%; /* Center vertically */
+    margin-bottom: -20px; /* Center vertically */
+   
+}
+
+.bottom-right {
+    
+    right: 50%; /* Center horizontally */
+    bottom: 0; /* Align with the bottom */
+    margin-right: -20px; /* Center horizontally */
 }
 
 @keyframes spin {
@@ -136,4 +175,17 @@ footer {
     left: 100px;
     bottom: 10px;
     z-index: 999; /* Make sure it's above other content */
+}
+
+.menu-image {
+    width: 100px;
+    height: 100px;
+    transform: rotate(90deg); /* Rotate the images 90 degrees to make them vertical */
+
+}
+
+.rectangle-image {
+    transform: rotate(90deg);
+    width: 240px;
+    height: 120px;
 }
