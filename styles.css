@@ -43,6 +43,16 @@ main {
     margin: 20px;
 }
 
+.main {
+    color: #fff;
+}
+
+.ul {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .price-container {
     background-color: #fff;
     border: 2px solid  black;;
