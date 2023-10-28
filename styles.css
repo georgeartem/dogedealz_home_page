@@ -220,3 +220,13 @@ footer {
 #friends:hover {
     text-decoration: underline;
 }
+
+#ordifind {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#ordifind:hover {
+    text-decoration: underline;
+}
