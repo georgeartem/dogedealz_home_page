@@ -38,6 +38,11 @@ h1 {
     margin: 0;
 }
 
+.social_icon {
+    width: 32px; /* Match the font size */
+    height: 32px; /* Match the font size */
+}
+
 main {
     text-align: center;
     margin: 20px;
@@ -218,15 +223,5 @@ footer {
 }
 
 #friends:hover {
-    text-decoration: underline;
-}
-
-#ordifind {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#ordifind:hover {
     text-decoration: underline;
 }
